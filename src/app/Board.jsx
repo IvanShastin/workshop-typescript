@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
+import * as React from'react';
+import { Component } from 'react';
 
 import { playerCell, aiCell } from './constants';
 import { Cell } from './Cell';
 
 /**
+ * @typedef {'' | 'X' | 'O'} CellValue
+ */
+/**
+ * @typedef {'' | 'X Wins!' | 'O Wins!' | 'Draw'} GameState
+ */
+ /**
  * @typedef {Object} State - creates a new type named 'State'
- * @property {Array<Array<string>>} cells - an array Matrix
- * @property {string} gameState - a string property of BoardState
+ * @property {Array<CellValue>} cells - an array Matrix
+ * @property {GameState} gameState - a string property of BoardState
  */
 
 export class Board extends Component {

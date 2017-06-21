@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component, MouseEvent } from 'react';
 
 export class Cell extends Component {
   /**
@@ -32,7 +33,7 @@ export class Cell extends Component {
 
   /**
  *
- * @param {Event=} e
+ * @param {MouseEvent=} e
  */
   handleClick(e) {
     this.props.handleMove();

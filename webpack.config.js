@@ -16,7 +16,7 @@ const config = env => {
       path: PATHS.dist,
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     devtool: 'source-map',
     devServer: {
@@ -25,8 +25,9 @@ const config = env => {
     },
     module: {
       rules: [
-        // js
-        { test: /\.jsx?$/, include: PATHS.root, use: { loader: 'babel-loader' } },
+        { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+        // ts
+        { test: /\.(t|j)sx?$/, include: PATHS.root, use: [{ loader: 'babel-loader' }, { loader: 'awesome-typescript-loader' }] },
         // css
         { test: /\.css$/, include: PATHS.root, use: ['style-loader', 'css-loader'] },
       ],
