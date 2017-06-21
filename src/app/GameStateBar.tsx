@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Component } from 'react';
+import {GameState} from './types';
 
 type State = {
   gameState: '' | 'X Wins!' | 'O Wins!' | 'Draw';

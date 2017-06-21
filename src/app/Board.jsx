@@ -3,12 +3,10 @@ import { Component } from 'react';
 
 import { playerCell, aiCell } from './constants';
 import { Cell } from './Cell';
+import { CellValue } from'./types';
 
 /**
- * @typedef {'' | 'X' | 'O'} CellValue
- */
-/**
- * @typedef {'' | 'X Wins!' | 'O Wins!' | 'Draw'} GameState
+@typedef {'' | 'X Wins!' | 'O Wins!' | 'Draw'} GameState
  */
  /**
  * @typedef {Object} State - creates a new type named 'State'
